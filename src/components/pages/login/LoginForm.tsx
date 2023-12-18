@@ -15,7 +15,7 @@ export default function LoginForm(): React.JSX.Element {
 
   return(
   <form action="submit" onSubmit={handleSubmit}>
-    <h1>Bienvenue chez nous !</h1>
+    <h1>Bienvenue chez nous !...</h1>
     <br />
     <h3>Connectez-vous</h3>
     <input
