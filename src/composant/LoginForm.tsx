@@ -1,35 +1,23 @@
-import { useState } from "react";
+import { LoginProps } from "./PropsType";
 
-function LoginForm() {
-  const [text, setText] = useState<string>("");
-
-  const handleSubmitLogin = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    alert(`bonjour ${text}`);
-    setText("");
-  };
-
-  const handleOnChangeLogin = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setText(event.target.value);
-  };
-
+function LoginForm(props: LoginProps) {
   return (
-    <>
-      <h1>
-        bienvenue chez nous ! <br />
-        Connectez vous
-      </h1>
-      <form onSubmit={handleSubmitLogin}>
+    <div>
+      <h1>Bienvenue chez nous !</h1>
+      <br />
+      <br />
+      <h3>Connectez vous</h3>
+      <form onSubmit={props.handleSubmit}>
         <input
           type="text"
-          value={text}
+          value={props.text}
           placeholder="Entrez votre prénom..."
-          onChange={handleOnChangeLogin}
+          onChange={props.handleChange}
           required
         />
         <input type="submit" value="Accéder à votre espace" />
       </form>
-    </>
+    </div>
   );
 }
 
