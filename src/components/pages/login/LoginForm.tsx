@@ -1,12 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const [text, setText] = useState<string>("");
+  const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    alert(`bonjour ${text}`);
-    setText("");
+    navigate(`/order/${text}`);
+    //alert(`bonjour ${text}`);
+    //setText("");
   };
 
   const handleOnChange = (event: React.ChangeEvent<HTMLInputElement>) => {
