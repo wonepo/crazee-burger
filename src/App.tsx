@@ -20,6 +20,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LoginForm />} />
+        <Route path="/order" element={<OrderPage />} />
         <Route path="/order/:id" element={<OrderPage />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
