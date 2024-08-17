@@ -1,0 +1,1 @@
+C:\Users\GEORGESSAHA\AppData\Local\Yarn\bin\vercel
