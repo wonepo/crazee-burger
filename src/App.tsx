@@ -1,16 +1,17 @@
-// @ts-nocheck
-import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import LoginForm from "./components/pages/login/LoginForm";
 import LoginPage from "./components/pages/login/LoginPage";
+import OrderPage from "./components/pages/order/OrderPage.tsx";
+import ErrorPage from "./components/pages/error/ErrorPage.tsx";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <LoginPage />
-    </>
+    <Routes>
+      <Route path="/" element={<LoginPage />} />
+      <Route path="/order" element={<OrderPage />} />
+      <Route path="/order/:username" element={<OrderPage />} />
+      <Route path="/*" element={<ErrorPage />} />
+    </Routes>
   );
 }
 
