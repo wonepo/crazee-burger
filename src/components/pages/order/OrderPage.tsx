@@ -1,7 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function OrderPage() {
-  const { id } = useParams();
+  const { username } = useParams();
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -10,7 +10,7 @@ export default function OrderPage() {
 
   return (
     <div>
-      <h1>Bonjour {id}</h1>
+      <h1>Bonjour {username}</h1>
       <button onClick={handleClick}>Déconnexion</button>
     </div>
   );
