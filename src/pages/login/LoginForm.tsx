@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaBeer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
@@ -22,7 +23,7 @@ export default function LoginForm() {
       <h2>Connectez vous</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <div></div>
+          <FaBeer />
           <input
             type="text"
             value={userName}
@@ -89,6 +90,10 @@ const LoginFormStyled = styled.div`
     align-items: center;
     padding: 0px 24px;
     gap: 12px;
+
+    svg {
+      color: #d3d3d3;
+    }
   }
 
   [type="text"] {
@@ -104,6 +109,13 @@ const LoginFormStyled = styled.div`
     color: ${(props) => props.theme.colors.white};
     border: 1px solid ${(props) => props.theme.colors.primary_burger};
     background-color: ${(props) => props.theme.colors.primary_burger};
+  }
+
+  input[type="submit"]:hover {
+    color: ${(props) => props.theme.colors.primary_burger};
+    border: 1px solid ${(props) => props.theme.colors.white};
+    background-color: ${(props) => props.theme.colors.white};
+    cursor: pointer;
   }
 
   form > div > div {
