@@ -8,52 +8,65 @@ export default function LoginPage() {
   return (
     <LoginPageStyled>
       <div>
+        <Logo />
         <div>
-          <div>CRAZEE</div>
-          <Logo />
-          <div>BURGER</div>
+          <h1>Bienvenue chez nous !</h1>
+          <hr />
+          <h2>Connectez vous</h2>
+          <LoginForm />
         </div>
-        <LoginForm />
       </div>
     </LoginPageStyled>
   );
 }
 
 const LoginPageStyled = styled.div`
-  background: ${(props) => props.theme.colors.primary_burger} url(${bg}) center
-    center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    ${(props) => props.theme.colors.primary_burger} url(${bg}) center
+      center/cover no-repeat;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  & > div {
-    width: 708px;
+  & > div > div:nth-child(1) {
+    scale: 2.5;
+  }
+
+  & > div > div:nth-child(2) {
+    margin-top: ${(props) => props.theme.spacing.xl};
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    gap: ${(props) => props.theme.spacing.md};
 
-  & > div > div:nth-child(1) {
-    height: 150px;
-    font-family: "AmaticBold";
-    font-weight: 700;
-    font-size: 110px;
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
+    h1,
+    h2,
+    hr {
+      width: 100%;
+      text-align: center;
+      font-family: "AmaticBold";
+      color: ${(props) => props.theme.colors.white};
+    }
 
-    div {
-      color: ${(props) => props.theme.colors.primary_burger};
+    h1 {
+      font-size: ${(props) => props.theme.fonts.P6};
+    }
+
+    h2 {
+      font-size: ${(props) => props.theme.fonts.P4};
+    }
+
+    hr {
+      height: 3px;
+      background-color: #f56a2c;
+      border: 1px solid #f56a2c;
     }
   }
 
-  img {
-    height: 150px;
-    width: 200px;
-    background-color: transparent;
-    border: blue 1px;
+  & > div > div > div {
+    font-size: ${(props) => props.theme.fonts.p4};
   }
 `;
