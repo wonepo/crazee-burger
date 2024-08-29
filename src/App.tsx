@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import { ThemeProvider } from "styled-components";
-import { theme } from "./styles/theme.styled.ts";
+import theme from "./styles/theme.styled.ts";
 
 import LoginPage from "./pages/login/LoginPage.tsx";
 import OrderPage from "./pages/order/OrderPage.tsx";
