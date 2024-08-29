@@ -47,7 +47,7 @@ const LoginPageStyled = styled.div`
     hr {
       width: 100%;
       text-align: center;
-      font-family: "AmaticBold";
+      font-family: Amatic-SC-Bold;
       color: ${(props) => props.theme.colors.white};
     }
 
@@ -67,6 +67,6 @@ const LoginPageStyled = styled.div`
   }
 
   & > div > div > div {
-    font-size: ${(props) => props.theme.fonts.p4};
+    font-size: ${(props) => props.theme.fonts.P4};
   }
 `;

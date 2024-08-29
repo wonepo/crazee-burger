@@ -21,7 +21,7 @@ const LogoStyled = styled.div`
 
   div {
     height: 100%;
-    font-family: "AmaticBold";
+    font-family: Amatic-SC-Bold;
     font-weight: ${(props) => props.theme.weights.bold};
     font-size: ${(props) => props.theme.fonts.P5};
     line-height: 60px;

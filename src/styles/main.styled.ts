@@ -27,24 +27,26 @@ const GlobalStyles = createGlobalStyle`
 }
 
 @font-face {
-    font-family: 'AmaticRegular';
-    src: url(${AmaticRegular}) format('truetype');
-    font-weight: normal;
+    font-family: Amatic-SC-Regular;
+    src: url(${AmaticRegular});
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'AmaticBold';
-    src: url(${AmaticBold}) format('truetype');
-    font-weight: normal;
+    font-family: Amatic-SC-Bold;
+    src: url(${AmaticBold});
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url(${OpenSans}) format('truetype');
+    font-optical-sizing: auto;
+    src: url(${OpenSans});
     font-weight: 500;
     font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 `; 
 
