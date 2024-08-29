@@ -1,17 +1,27 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import LoginPage from "./components/pages/login/LoginPage";
-import OrderPage from "./components/pages/order/OrderPage.tsx";
-import ErrorPage from "./components/pages/error/ErrorPage.tsx";
+import { ThemeProvider } from "styled-components";
+import { theme } from "./styles/theme.styled.ts";
+
+import LoginPage from "./pages/login/LoginPage.tsx";
+import OrderPage from "./pages/order/OrderPage.tsx";
+import ErrorPage from "./pages/error/ErrorPage.tsx";
+import Textfield from "./components/Textfield.tsx";
+import Button from "./components/Button.tsx";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LoginPage />} />
-      <Route path="/order" element={<OrderPage />} />
-      <Route path="/order/:username" element={<OrderPage />} />
-      <Route path="/*" element={<ErrorPage />} />
-    </Routes>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/button" element={<Button />} />
+          <Route path="/order" element={<OrderPage />} />
+          <Route path="/order/:username" element={<OrderPage />} />
+          <Route path="/*" element={<ErrorPage />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
