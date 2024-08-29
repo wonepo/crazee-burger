@@ -1,5 +1,4 @@
 import React from "react";
-import { PiDropSimpleLight } from "react-icons/pi";
 import styled from "styled-components";
 
 type ButtonProps = React.ComponentProps<"button"> & {
