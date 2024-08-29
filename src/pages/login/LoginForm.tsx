@@ -21,14 +21,14 @@ export default function LoginForm() {
   return (
     <LoginFormStyled onSubmit={handleSubmit}>
       <Textfield
-        iconBefore={<FaBeer />}
+        iconbefore={<FaBeer />}
         type="text"
         value={userName}
         placeholder="Entrez votre prénom"
         onChange={handleOnChange}
         required
       ></Textfield>
-      <Button label="Accéder à mon espace" iconAfter={<FaBeer />}></Button>
+      <Button label="Accéder à mon espace" iconafter={<FaBeer />}></Button>
     </LoginFormStyled>
   );
 }

@@ -1,3 +1,5 @@
+
+
 const colors = {
   dark: "#17161a",
   incognito: "#333",
@@ -41,14 +43,18 @@ const fonts = {
   P6: "48px",
   P7: "60px",
 }
+
 const gridUnit = 8
+
 const borderRadius = {
   subtle: 1,
   round: "5px",
   extraRound: "15px",
   circle: "50%",
 }
+
 const shadows = {}
+
 const weights = {
   light: 300,
   regular: 400,
@@ -56,6 +62,14 @@ const weights = {
   semiBold: 600,
   bold: 700,
   heavy: 800,
+}
+
+const breakpoint = {
+  xs: "360px",
+  sm: "600px",
+  md: "960px",
+  lg: "1280px",
+  xl: "1920px",
 }
 
 export type ThemeType = typeof theme;
@@ -68,6 +82,7 @@ const theme = {
   shadows,
   weights,
   spacing,
+  breakpoint,
 }
 
 export default theme;

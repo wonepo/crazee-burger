@@ -31,16 +31,15 @@ const LoginPageStyled = styled.div`
   align-items: center;
 
   & > div > div:nth-child(1) {
-    scale: 2.5;
+    scale: 1.1;
   }
 
   & > div > div:nth-child(2) {
-    margin-top: ${(props) => props.theme.spacing.xl};
-    width: 400px;
+    margin-top: ${(props) => props.theme.spacing.sm};
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: ${(props) => props.theme.spacing.md};
+    gap: ${(props) => props.theme.spacing.sm};
 
     h1,
     h2,
@@ -52,7 +51,7 @@ const LoginPageStyled = styled.div`
     }
 
     h1 {
-      font-size: ${(props) => props.theme.fonts.P6};
+      font-size: ${(props) => props.theme.fonts.P5};
     }
 
     h2 {
@@ -67,6 +66,34 @@ const LoginPageStyled = styled.div`
   }
 
   & > div > div > div {
-    font-size: ${(props) => props.theme.fonts.P4};
+    font-size: ${(props) => props.theme.fonts.P5};
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoint.sm}) {
+    & > div > div:nth-child(1) {
+      scale: 1.5;
+    }
+    & > div > div:nth-child(2) {
+      width: 400px;
+      gap: ${(props) => props.theme.spacing.md};
+      margin-top: ${(props) => props.theme.spacing.md};
+    }
+
+    h1 {
+      font-size: ${(props) => props.theme.fonts.P6};
+    }
+
+    h2 {
+      font-size: ${(props) => props.theme.fonts.P4};
+    }
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoint.md}) {
+    & > div > div:nth-child(1) {
+      scale: 2.5;
+    }
+    & > div > div:nth-child(2) {
+      margin-top: ${(props) => props.theme.spacing.xl};
+    }
   }
 `;
