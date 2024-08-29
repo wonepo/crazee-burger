@@ -1,16 +1,16 @@
 import styled from "styled-components";
 
 type TextfieldProps = React.ComponentProps<"input"> & {
-  iconBefore?: JSX.Element;
-  iconAfter?: JSX.Element;
+  iconbefore?: JSX.Element;
+  iconafter?: JSX.Element;
 };
 
 export default function Textfield(props: TextfieldProps) {
   return (
     <TextStyled>
-      {props.iconBefore}
+      {props.iconbefore}
       <input {...props} />
-      {props.iconAfter}
+      {props.iconafter}
     </TextStyled>
   );
 }

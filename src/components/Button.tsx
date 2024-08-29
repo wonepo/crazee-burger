@@ -3,16 +3,16 @@ import styled from "styled-components";
 
 type ButtonProps = React.ComponentProps<"button"> & {
   label: string;
-  iconBefore?: JSX.Element;
-  iconAfter?: JSX.Element;
+  iconbefore?: JSX.Element;
+  iconafter?: JSX.Element;
 };
 
 export default function Button(props: ButtonProps) {
   return (
     <ButtonStyled {...props}>
-      {props.iconBefore}
+      {props.iconbefore}
       <p>{props.label}</p>
-      {props.iconAfter}
+      {props.iconafter}
     </ButtonStyled>
   );
 }
