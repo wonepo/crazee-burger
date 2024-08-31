@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 import OpenSans from "./../assets/fonts/OpenSans-Medium.ttf";
+import OpenSansVariable from "./../assets/fonts/OpenSans-VariableFont.ttf"
 import AmaticBold from "./../assets/fonts/AmaticSC-Bold.ttf";
 import AmaticRegular from "./../assets/fonts/AmaticSC-Regular.ttf";
 
@@ -41,13 +42,20 @@ const GlobalStyles = createGlobalStyle`
 }
 
 @font-face {
-    font-family: 'Open Sans';
+    font-family: 'Open Sans2';
     font-optical-sizing: auto;
     src: url(${OpenSans});
     font-weight: 500;
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
+
+@font-face {
+    font-family: 'Open Sans';
+    font-optical-sizing: auto;
+    src: url(${OpenSansVariable});
+}
+
 `; 
 
 export default GlobalStyles;

@@ -68,8 +68,8 @@ const breakpoint = {
   xs: "360px",
   sm: "600px",
   md: "960px",
-  lg: "1280px",
-  xl: "1920px",
+  lg: "1520px",
+  xl: "1900px",
 }
 
 export type ThemeType = typeof theme;
