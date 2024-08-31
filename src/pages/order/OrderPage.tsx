@@ -70,7 +70,7 @@ const OrderPageStyled = styled.div`
 
   & > main {
     background-color: ${(props) => props.theme.colors.background_white};
-    box-shadow: inset 1px 2px 1em gray;
+    box-shadow: 0px 8px 20px 8px rgba(0, 0, 0, 0.2) inset;
     height: 100%;
     width: 100%;
   }
