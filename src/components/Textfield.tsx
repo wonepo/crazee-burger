@@ -21,7 +21,7 @@ const TextStyled = styled.div`
   align-items: center;
   height: 53px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: ${(props) => props.theme.borderRadius.round};
   border: 1px solid ${(props) => props.theme.colors.white};
   background-color: ${(props) => props.theme.colors.white};
   padding: 0px 24px;

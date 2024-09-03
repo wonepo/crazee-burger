@@ -9,7 +9,7 @@ type ButtonProps = React.ComponentProps<"button"> & {
 
 export default function Button(props: ButtonProps) {
   return (
-    <ButtonStyled {...props}>
+    <ButtonStyled className={props.className}>
       {props.iconbefore}
       <p>{props.label}</p>
       {props.iconafter}
@@ -24,7 +24,7 @@ const ButtonStyled = styled.button`
   justify-content: center;
   height: 53px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: ${(props) => props.theme.borderRadius.round};
   color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.primary_burger};
   background-color: ${(props) => props.theme.colors.primary_burger};
@@ -35,5 +35,11 @@ const ButtonStyled = styled.button`
     border: 1px solid ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.white};
     cursor: pointer;
+  }
+
+  &:active {
+    color: ${(props) => props.theme.colors.white};
+    border: 1px solid ${(props) => props.theme.colors.primary_burger};
+    background-color: ${(props) => props.theme.colors.primary_burger};
   }
 `;

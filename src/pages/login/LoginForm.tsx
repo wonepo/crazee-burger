@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { FaBeer } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Button from "../../components/Button";
 import Textfield from "../../components/Textfield";
+import { BsPersonCircle } from "react-icons/bs";
+import { IoChevronForward } from "react-icons/io5";
 
-export default function LoginForm() {
+export default function LoginForm(props: React.ComponentProps<"form">) {
   const [userName, setUserName] = useState<string>("");
   const navigate = useNavigate();
 
@@ -19,16 +20,20 @@ export default function LoginForm() {
   };
 
   return (
-    <LoginFormStyled onSubmit={handleSubmit}>
+    <LoginFormStyled onSubmit={handleSubmit} className={props.className}>
       <Textfield
-        iconbefore={<FaBeer />}
+        iconbefore={<BsPersonCircle />}
         type="text"
         value={userName}
         placeholder="Entrez votre prénom"
         onChange={handleOnChange}
         required
       ></Textfield>
-      <Button label="Accéder à mon espace" iconafter={<FaBeer />}></Button>
+      <Button
+        className="buttoncss"
+        label="Accéder à mon espace"
+        iconafter={<IoChevronForward />}
+      ></Button>
     </LoginFormStyled>
   );
 }

@@ -3,16 +3,15 @@ import Logo from "../../components/Logo";
 import LoginForm from "./LoginForm";
 
 import styled from "styled-components";
+import WelComeCpn from "./WelComeCpn";
 
 export default function LoginPage() {
   return (
     <LoginPageStyled>
       <div>
-        <Logo />
+        <Logo className="logocss" />
         <div>
-          <h1>Bienvenue chez nous !</h1>
-          <hr />
-          <h2>Connectez vous</h2>
+          <WelComeCpn />
           <LoginForm />
         </div>
       </div>
@@ -30,70 +29,22 @@ const LoginPageStyled = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > div > div:nth-child(1) {
+  .logocss {
     scale: 1.1;
-  }
-
-  & > div > div:nth-child(2) {
-    margin-top: ${(props) => props.theme.spacing.sm};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: ${(props) => props.theme.spacing.sm};
-
-    h1,
-    h2,
-    hr {
-      width: 100%;
-      text-align: center;
-      font-family: Amatic-SC-Bold;
-      color: ${(props) => props.theme.colors.white};
+    div {
+      font-size: ${(props) => props.theme.fonts.size.P5};
     }
-
-    h1 {
-      font-size: ${(props) => props.theme.fonts.P5};
-    }
-
-    h2 {
-      font-size: ${(props) => props.theme.fonts.P4};
-    }
-
-    hr {
-      height: 3px;
-      background-color: #f56a2c;
-      border: 1px solid #f56a2c;
-    }
-  }
-
-  & > div > div > div {
-    font-size: ${(props) => props.theme.fonts.P5};
   }
 
   @media (min-width: ${(props) => props.theme.breakpoint.sm}) {
-    & > div > div:nth-child(1) {
+    .logocss {
       scale: 1.5;
-    }
-    & > div > div:nth-child(2) {
-      width: 400px;
-      gap: ${(props) => props.theme.spacing.md};
-      margin-top: ${(props) => props.theme.spacing.md};
-    }
-
-    h1 {
-      font-size: ${(props) => props.theme.fonts.P6};
-    }
-
-    h2 {
-      font-size: ${(props) => props.theme.fonts.P4};
     }
   }
 
   @media (min-width: ${(props) => props.theme.breakpoint.md}) {
-    & > div > div:nth-child(1) {
+    .logocss {
       scale: 2.5;
-    }
-    & > div > div:nth-child(2) {
-      margin-top: ${(props) => props.theme.spacing.xl};
     }
   }
 `;

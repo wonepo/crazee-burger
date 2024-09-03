@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../../components/Logo";
-import { FaPerson } from "react-icons/fa6";
 import RigthHeader from "./RigthHeader";
+import { BsPersonCircle } from "react-icons/bs";
 
 export default function OrderPage() {
   const { username } = useParams();
@@ -18,9 +18,11 @@ export default function OrderPage() {
         <a href={location.pathname}>
           <Logo />
         </a>
-        <RigthHeader icon={<FaPerson />} username={username} />
+        <RigthHeader icon={<BsPersonCircle />} username={username} />
       </header>
-      <main></main>
+      <main>
+        <div></div>
+      </main>
     </OrderPageStyled>
   );
 }

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import logo from "../assets/logo-orange.png";
 
-export default function Logo() {
+export default function Logo(props: React.ComponentProps<"div">) {
   return (
-    <LogoStyled>
+    <LogoStyled className={props.className}>
       <div>CRAZEE</div>
       <div></div>
       <div>BURGER</div>
@@ -22,8 +22,8 @@ const LogoStyled = styled.div`
   div {
     height: 100%;
     font-family: Amatic-SC-Bold;
-    font-weight: ${(props) => props.theme.weights.bold};
-    font-size: ${(props) => props.theme.fonts.P5};
+    font-weight: ${(props) => props.theme.fonts.weights.bold};
+    font-size: ${(props) => props.theme.fonts.size.P5};
     line-height: 60px;
     text-align: center;
     color: ${(props) => props.theme.colors.primary_burger};
