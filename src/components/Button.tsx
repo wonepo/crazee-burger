@@ -1,19 +1,18 @@
 import React from "react";
-import { PiDropSimpleLight } from "react-icons/pi";
 import styled from "styled-components";
 
 type ButtonProps = React.ComponentProps<"button"> & {
   label: string;
-  iconBefore?: JSX.Element;
-  iconAfter?: JSX.Element;
+  iconbefore?: JSX.Element;
+  iconafter?: JSX.Element;
 };
 
 export default function Button(props: ButtonProps) {
   return (
-    <ButtonStyled {...props}>
-      {props.iconBefore}
+    <ButtonStyled className={props.className}>
+      {props.iconbefore}
       <p>{props.label}</p>
-      {props.iconAfter}
+      {props.iconafter}
     </ButtonStyled>
   );
 }
@@ -25,7 +24,7 @@ const ButtonStyled = styled.button`
   justify-content: center;
   height: 53px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: ${(props) => props.theme.borderRadius.round};
   color: ${(props) => props.theme.colors.white};
   border: 1px solid ${(props) => props.theme.colors.primary_burger};
   background-color: ${(props) => props.theme.colors.primary_burger};
@@ -36,5 +35,11 @@ const ButtonStyled = styled.button`
     border: 1px solid ${(props) => props.theme.colors.white};
     background-color: ${(props) => props.theme.colors.white};
     cursor: pointer;
+  }
+
+  &:active {
+    color: ${(props) => props.theme.colors.white};
+    border: 1px solid ${(props) => props.theme.colors.primary_burger};
+    background-color: ${(props) => props.theme.colors.primary_burger};
   }
 `;

@@ -3,16 +3,15 @@ import Logo from "../../components/Logo";
 import LoginForm from "./LoginForm";
 
 import styled from "styled-components";
+import WelComeCpn from "./WelComeCpn";
 
 export default function LoginPage() {
   return (
     <LoginPageStyled>
       <div>
-        <Logo />
+        <Logo className="logocss" />
         <div>
-          <h1>Bienvenue chez nous !</h1>
-          <hr />
-          <h2>Connectez vous</h2>
+          <WelComeCpn />
           <LoginForm />
         </div>
       </div>
@@ -30,43 +29,22 @@ const LoginPageStyled = styled.div`
   justify-content: center;
   align-items: center;
 
-  & > div > div:nth-child(1) {
-    scale: 2.5;
-  }
-
-  & > div > div:nth-child(2) {
-    margin-top: ${(props) => props.theme.spacing.xl};
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: ${(props) => props.theme.spacing.md};
-
-    h1,
-    h2,
-    hr {
-      width: 100%;
-      text-align: center;
-      font-family: "AmaticBold";
-      color: ${(props) => props.theme.colors.white};
-    }
-
-    h1 {
-      font-size: ${(props) => props.theme.fonts.P6};
-    }
-
-    h2 {
-      font-size: ${(props) => props.theme.fonts.P4};
-    }
-
-    hr {
-      height: 3px;
-      background-color: #f56a2c;
-      border: 1px solid #f56a2c;
+  .logocss {
+    scale: 1.1;
+    div {
+      font-size: ${(props) => props.theme.fonts.size.P5};
     }
   }
 
-  & > div > div > div {
-    font-size: ${(props) => props.theme.fonts.p4};
+  @media (min-width: ${(props) => props.theme.breakpoint.sm}) {
+    .logocss {
+      scale: 1.5;
+    }
+  }
+
+  @media (min-width: ${(props) => props.theme.breakpoint.md}) {
+    .logocss {
+      scale: 2.5;
+    }
   }
 `;

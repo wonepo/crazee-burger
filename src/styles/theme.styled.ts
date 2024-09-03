@@ -29,17 +29,27 @@ const spacing = {
 }
 
 const fonts = {
-  XXXS: "8px",
-  XXS: "10px",
-  XS: "12px",
-  P0: "15px",
-  P1: "18px",
-  P2: "20px",
-  P3: "24px",
-  P4: "36px",
-  P5: "40px",
-  P6: "48px",
-  P7: "60px",
+  size: {
+    XXXS: "8px",
+    XXS: "10px",
+    XS: "12px",
+    P0: "15px",
+    P1: "18px",
+    P2: "20px",
+    P3: "24px",
+    P4: "36px",
+    P5: "40px",
+    P6: "48px",
+    P7: "60px",
+  },
+  weights: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    heavy: 800,
+  },
 }
 const gridUnit = 8
 const borderRadius = {
@@ -48,22 +58,27 @@ const borderRadius = {
   extraRound: "15px",
   circle: "50%",
 }
+
 const shadows = {}
-const weights = {
-  light: 300,
-  regular: 400,
-  medium: 500,
-  semiBold: 600,
-  bold: 700,
-  heavy: 800,
+
+const breakpoint = {
+  xs: "360px",
+  sm: "600px",
+  md: "960px",
+  lg: "1520px",
+  xl: "1900px",
 }
 
-export const theme = {
+export type ThemeType = typeof theme;
+
+const theme = {
   colors,
   fonts,
   gridUnit,
   borderRadius,
   shadows,
-  weights,
   spacing,
+  breakpoint,
 }
+
+export default theme;
